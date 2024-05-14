@@ -23,24 +23,18 @@ def max_marks(marks):
 
 ```
 
-
-
-
-```
-
 ii)	# To find the maximum marks using the list method max().
 ```Python
+
 def max_marks(marks):
 
-    marks.sort()
+    large=marks[len(marks)-1]
 
-    large=marks[-1]
+    marks.sort(reverse=True)
+
+    large=marks[0]
 
     return large
-
-```
-
-
 
 ```
 
@@ -49,15 +43,15 @@ iii) # To find the maximum marks without using builtin functions.
 
 def max_marks(marks):
 
-    marks.sort()
+    maxmark=0
 
-    large=marks[-1]
+    for i in marks:
 
-    return large
+        if i>maxmark:
 
-```
+            maxmark=i
 
-
+    return maxmark
 
 ```
 
